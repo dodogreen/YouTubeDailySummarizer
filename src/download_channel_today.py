@@ -89,17 +89,12 @@ def main(channel_url, base_dir):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Download today\'s videos from specified YouTube channels.')
-    parser.add_argument('-c', '--channels', nargs='+', default=[
-                        'https://www.youtube.com/@user-mk9eo5kx3d',
-                        'https://www.youtube.com/@eason111',
-                        'https://www.youtube.com/@user-zr8qq2te8l',
-                        'https://www.youtube.com/@user-id3ui2pw7j'
-                        ], help='List of YouTube channel URLs')
-    parser.add_argument('-d', '--output', default='download_mp3_srt', help='Base output for downloads')
+    parser.add_argument('-c', '--channels', nargs='+', default=[], help='List of YouTube channel URLs')
+    parser.add_argument('-d', '--output_dir', default='download_mp3_srt', help='Base output for downloads')
 
     args = parser.parse_args()
     
     for channel_url in args.channels:
-        main(channel_url, args.output)
+        main(channel_url, args.output_dir)
     
 

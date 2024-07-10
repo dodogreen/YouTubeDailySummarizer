@@ -34,6 +34,10 @@ This repository contains four main programs designed to automate the process of 
    - This program downloads videos or captions from given URLs.
    - **Tools**: `youtube-dl`, `yt-dlp`
 
+   ```
+   python download_videos.py --channels 'https://www.youtube.com/@channel1' 'https://www.youtube.com/@channel2' --output_dir 'my_custom_directory'
+   ```
+
 2. **Speech-to-Text Converter**
    - This program takes the downloaded videos and uses a speech-to-text model to convert the audio content into text (only if captions are not available).
    - **Tools**: `Google Cloud Speech-to-Text API`, `Microsoft Azure Speech Service`, `科大讯飞语音识别`
